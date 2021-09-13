@@ -1,38 +1,44 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.MuiCardHeader-title.MuiTypography-body2{
+   font-weight: bold !important;
+   font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.MuiCardHeader-subheader.MuiTypography-body2{
+   font-size: 12px !important;
+   color: rgb(175, 169, 169) !important;
+}
+.MuiCard-root{
+  width: 500px;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MuiPaper-root.MuiCard-root{
+  margin-top: 20px;
+}
+
+.MuiTypography-root.MuiCardHeader-title.MuiTypography-h5{
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body1{
+  font-size: 15px;
+  color: #000;
+}
+
+.MuiTypography-root.MuiTypography-body2.MuiTypography-colorTextSecondary{
+  color: #000;
+  font-size: 15px;
+}
+
+.MuiCardContent-root{
+  padding-top: 0 !important;
 }
