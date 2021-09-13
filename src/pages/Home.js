@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ImagePost from '../components/ImagePost';
+import About from '../components/About';
 import Loader from '../components/Loader';
 import axios from 'axios';
 import { NASA_URL } from '../api';
@@ -41,6 +42,16 @@ const Home = () => {
 
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [open, setOpen] = useState(false);
+    const [scroll, setScroll] = useState('paper');
+
+    const handleClickOpen = (scrollType) => () => {
+        setOpen(true);
+        setScroll(scrollType);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
     useEffect(() => {
         if (isLoading) {
             const getNasaImages = async () => {
@@ -65,7 +76,8 @@ const Home = () => {
                         }
                         action={
                             <IconButton aria-label="settings">
-                                <MoreVertIcon />
+                                <MoreVertIcon onClick={handleClickOpen('paper')} />
+                                <About open={open} handleClose={handleClose} scroll={scroll} />
                             </IconButton>
                         }
                         className={classes.header}
