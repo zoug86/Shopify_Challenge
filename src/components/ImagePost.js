@@ -7,14 +7,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Popup from './Popup';
 import Liker from './Liker';
 
@@ -54,13 +49,13 @@ const ImagePost = ({ title, image, description, date, author }) => {
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
+
     return (
         <Card className={classes.root}>
             <CardMedia
                 className={classes.media}
                 image={image}
                 title={title}
-                rounded
             />
             <CardHeader
 
@@ -89,7 +84,7 @@ const ImagePost = ({ title, image, description, date, author }) => {
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <Typography paragraph>
-                        Copyright: {author}
+                        <strong>Copyright: </strong> {author ? author : 'Not Specified'}
                     </Typography>
                 </CardContent>
             </Collapse>
