@@ -16,16 +16,16 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
     container: {
         width: 500,
-        background: '#f3f3f3',
+        background: '#ececec',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         paddingLeft: 10,
         paddingRight: 10,
-        paddingBottom: 20,
+        paddingBottom: 30,
         marginTop: 20,
-        marginBottom: 20,
+        marginBottom: 30,
     },
     avatar_img: {
         height: '50px',
@@ -62,7 +62,7 @@ const Home = () => {
             getNasaImages();
         }
 
-    });
+    }, [isLoading]);
     return (
         isLoading ? <Loader /> : (
             <div className={classes.container}>

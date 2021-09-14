@@ -5,6 +5,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import { Typography } from '@material-ui/core';
 
 export default function ScrollDialog({ open, handleClose, scroll }) {
 
@@ -34,19 +35,23 @@ export default function ScrollDialog({ open, handleClose, scroll }) {
                         ref={descriptionElementRef}
                         tabIndex={-1}
                     >
-                        {[...new Array(50)]
-                            .map(
-                                () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                            )
-                            .join('\n')}
+                        <Typography>
+                            <strong>Spacestagram</strong> is a photo and video sharing social networking service created by Houssem Marzougui.
+                            All media content is taken from NASA's free and public APIs.
+                        </Typography>
+                        <br />
+                        <Typography>
+                            NASA is the National Aeronautics and Space Administration of the U.S. federal government responsible for the civilian
+                            space program, as well as aeronautics and space research. NASA's science is focused on better understanding Earth through
+                            the Earth Observing System;advancing heliophysics through the efforts of the Science Mission Directorate's Heliophysics
+                            Research Program; exploring bodies throughout the Solar System with advanced robotic spacecraft such as New Horizons;
+                            and researching astrophysics topics, such as the Big Bang, through the Great Observatories and associated programs.
+                        </Typography>
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">
-                        <a href='https://www.nasa.gov/about/index.html' target='_blank' style={{ textDecoration: 'none' }}>Learn more about Nasa</a>
+                        <a href='https://www.nasa.gov/about/index.html' target='_blank' rel="noreferrer" style={{ textDecoration: 'none' }}>Learn more about Nasa</a>
                     </Button>
                 </DialogActions>
             </Dialog>
