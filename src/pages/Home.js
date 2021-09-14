@@ -15,7 +15,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        width: 500,
+        width: 450,
         background: '#ececec',
         display: 'flex',
         flexDirection: 'column',
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         paddingLeft: 10,
         paddingRight: 10,
-        paddingBottom: 30,
+        paddingBottom: 10,
         marginTop: 20,
         marginBottom: 30,
     },
