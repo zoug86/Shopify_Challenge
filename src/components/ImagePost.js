@@ -15,7 +15,7 @@ import Liker from './Liker';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        maxWidth: 450,
+        maxWidth: 500,
         borderTopRightRadius: '1%',
         borderTopLeftRadius: '1%',
     },

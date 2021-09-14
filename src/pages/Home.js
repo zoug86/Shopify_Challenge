@@ -15,7 +15,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        width: 450,
+        width: 500,
         background: '#ececec',
         display: 'flex',
         flexDirection: 'column',
