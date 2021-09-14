@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: 500,
         borderTopRightRadius: '1%',
         borderTopLeftRadius: '1%',
+        ["@media (max-width:550px)"]: {
+            width: 400,
+        }, ["@media (max-width:450px)"]: {
+            width: 300,
+        },
     },
     media: {
         height: 0,

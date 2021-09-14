@@ -4,7 +4,7 @@ import About from '../components/About';
 import Loader from '../components/Loader';
 import axios from 'axios';
 import { NASA_URL } from '../api';
-import spaceLogo from '../assets/space_logo.jpg'
+import spaceLogo from '../assets/space_logo.jpg';
 
 //material UI
 import { makeStyles } from '@material-ui/core/styles';
@@ -26,6 +26,12 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 10,
         marginTop: 20,
         marginBottom: 30,
+        ["@media (max-width:550px)"]: {
+            width: 400,
+        },
+        ["@media (max-width:450px)"]: {
+            width: 300,
+        },
     },
     avatar_img: {
         height: '50px',
@@ -34,12 +40,14 @@ const useStyles = makeStyles((theme) => ({
     },
     image_post: {
         marginBottom: '5px',
+    },
+    '@media(maxWidth: 600)': {
+
     }
 }));
 
 const Home = () => {
     const classes = useStyles();
-
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [open, setOpen] = useState(false);
